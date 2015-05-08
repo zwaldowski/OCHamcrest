@@ -10,10 +10,12 @@
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
     // Test support
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@interface NumberAssertTest : SenTestCase
+@interface NumberAssertTest : XCTestCase
 @end
 
 @implementation NumberAssertTest
@@ -21,7 +23,7 @@
 - (void)setUp
 {
     [super setUp];
-    [self raiseAfterFailure];
+    self.continueAfterFailure = NO;
 }
 
 - (void)testSuccess_withBool
@@ -37,11 +39,12 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <0>, but was <1>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <0>, but was <1>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
+
 
 - (void)testFailure_withBoolMoreExplicitDescription
 {
@@ -51,11 +54,13 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected a BOOL with value <NO>, but was <YES>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected a BOOL with value <NO>, but was <YES>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
+
+#pragma clang diagnostic pop
 
 - (void)testSuccess_withChar
 {
@@ -70,10 +75,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <65>, but was <66>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <65>, but was <66>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withDouble
@@ -89,10 +94,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withFloat
@@ -108,10 +113,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withInt
@@ -127,10 +132,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withLong
@@ -146,10 +151,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withLongLong
@@ -165,10 +170,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withShort
@@ -184,10 +189,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedChar
@@ -203,10 +208,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <65>, but was <66>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <65>, but was <66>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedInt
@@ -222,10 +227,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedLong
@@ -241,10 +246,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedLongLong
@@ -260,10 +265,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
+        XCTAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason]);
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedShort
@@ -279,10 +284,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withInteger
@@ -298,10 +303,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testSuccess_withUnsignedInteger
@@ -317,10 +322,10 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected <1>, but was <2>", nil);
+        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 @end

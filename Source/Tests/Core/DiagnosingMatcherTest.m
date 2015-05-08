@@ -31,7 +31,7 @@
 {
     id matcher = [[IncompleteDiagnosingMatcher alloc] init];
 
-    STAssertThrows([matcher matches:nil describingMismatchTo:nil], nil);
+    XCTAssertThrows([matcher matches:nil describingMismatchTo:nil]);
 }
 
 @end

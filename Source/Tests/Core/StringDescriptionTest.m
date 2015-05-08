@@ -8,7 +8,7 @@
 #import <OCHamcrest/HCSelfDescribing.h>
 
     // Test support
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 
 @interface FakeSelfDescribing : NSObject <HCSelfDescribing>
@@ -79,7 +79,7 @@
 @end
 
 
-@interface StringDescriptionTest : SenTestCase
+@interface StringDescriptionTest : XCTestCase
 @end
 
 @implementation StringDescriptionTest
@@ -103,56 +103,56 @@
 {
     [description appendDescriptionOf:nil];
 
-    STAssertEqualObjects([description description], @"nil", nil);
+    XCTAssertEqualObjects([description description], @"nil");
 }
 
 - (void)testLetsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[FakeSelfDescribing alloc] init]];
 
-    STAssertEqualObjects([description description], @"DESCRIPTION", nil);
+    XCTAssertEqualObjects([description description], @"DESCRIPTION");
 }
 
 - (void)testDescribesStringInQuotes
 {
     [description appendDescriptionOf:@"FOO"];
 
-    STAssertEqualObjects([description description], @"\"FOO\"", nil);
+    XCTAssertEqualObjects([description description], @"\"FOO\"");
 }
 
 - (void)testDescriptionOfStringWithQuotesShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\"b"];
 
-    STAssertEqualObjects([description description], @"\"a\\\"b\"", nil);
+    XCTAssertEqualObjects([description description], @"\"a\\\"b\"");
 }
 
 - (void)testDescriptionOfStringWithNewlineShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\nb"];
 
-    STAssertEqualObjects([description description], @"\"a\\nb\"", nil);
+    XCTAssertEqualObjects([description description], @"\"a\\nb\"");
 }
 
 - (void)testDescriptionOfStringWithCarriageReturnShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\rb"];
 
-    STAssertEqualObjects([description description], @"\"a\\rb\"", nil);
+    XCTAssertEqualObjects([description description], @"\"a\\rb\"");
 }
 
 - (void)testDescriptionOfStringWithTabShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\tb"];
 
-    STAssertEqualObjects([description description], @"\"a\\tb\"", nil);
+    XCTAssertEqualObjects([description description], @"\"a\\tb\"");
 }
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {
     [description appendDescriptionOf:@42];
 
-    STAssertEqualObjects([description description], @"<42>", nil);
+    XCTAssertEqualObjects([description description], @"<42>");
 }
 
 - (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
@@ -160,7 +160,7 @@
     [description appendDescriptionOf:[[NSObject alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
-    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+    XCTAssertTrue([expected evaluateWithObject:[description description]]);
 }
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
@@ -168,7 +168,7 @@
     ObjectDescriptionWithLessThan *lessThanDescription = [[ObjectDescriptionWithLessThan alloc] init];
     [description appendDescriptionOf:lessThanDescription];
 
-    STAssertEqualObjects([description description], @"<< is less than>", nil);
+    XCTAssertEqualObjects([description description], @"<< is less than>");
 }
 
 - (void)testCanDescribeObjectWithNilDescription
@@ -176,7 +176,7 @@
     [description appendDescriptionOf:[[ObjectWithNilDescription alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<ObjectWithNilDescription: 0x[0-9a-fA-F]+>'"];
-    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+    XCTAssertTrue([expected evaluateWithObject:[description description]]);
 }
 
 - (void)testAppendListWithEmptyListShouldHaveStartAndEndOnly
@@ -186,7 +186,7 @@
                   separator:@","
                         end:@"]"];
 
-    STAssertEqualObjects([description description], @"[]", nil);
+    XCTAssertEqualObjects([description description], @"[]");
 }
 
 - (void)testAppendListWithOneItemShouldHaveStartItemAndEnd
@@ -196,7 +196,7 @@
                   separator:@","
                         end:@"]"];
 
-    STAssertEqualObjects([description description], @"[\"a\"]", nil);
+    XCTAssertEqualObjects([description description], @"[\"a\"]");
 }
 
 - (void)testAppendListWithTwoItemsShouldHaveItemsWithSeparator
@@ -206,7 +206,7 @@
                   separator:@","
                         end:@"]"];
 
-    STAssertEqualObjects([description description], @"[\"a\",\"b\"]", nil);
+    XCTAssertEqualObjects([description description], @"[\"a\",\"b\"]");
 }
 
 - (void)testAbleToDescribeProxyObject
@@ -215,7 +215,7 @@
 
     [description appendDescriptionOf:proxy];
 
-    STAssertEqualObjects([description description], @"<DESCRIPTION>", nil);
+    XCTAssertEqualObjects([description description], @"<DESCRIPTION>");
 }
 
 @end

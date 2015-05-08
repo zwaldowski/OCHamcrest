@@ -85,7 +85,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(onlyContains(nil), @"Should require non-nil list");
+    XCTAssertThrows(onlyContains(nil), @"Should require non-nil list");
 }
 
 - (void)testHasAReadableDescription

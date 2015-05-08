@@ -21,8 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0817B5CD147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
-		0817B5CE147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		081BEE631345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
@@ -367,6 +365,57 @@
 		BB333FEC8B49B249E92B3671 /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333144F9FA03AC04F8027D /* HCStringContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333FF1353091B71E6A3B33 /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337085D9BEFA6D52E7EB0 /* HCTestFailureHandlerChain.m */; };
 		BB333FFD6EAB7828C98E11EE /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334EF9BFFB721161BB23F /* HCConformsToProtocol.m */; };
+		DBDA22791AFC52AA00345BD4 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
+		DBDA227F1AFC530A00345BD4 /* AbstractMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2A13FF676E004A22FE /* AbstractMatcherTest.m */; };
+		DBDA22801AFC530A00345BD4 /* AssertThatTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* AssertThatTest.m */; };
+		DBDA22811AFC530A00345BD4 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
+		DBDA22821AFC530A00345BD4 /* BaseMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */; };
+		DBDA22831AFC530A00345BD4 /* DiagnosingMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */; };
+		DBDA22841AFC530A00345BD4 /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */; };
+		DBDA22851AFC530A00345BD4 /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */; };
+		DBDA22861AFC530A00345BD4 /* EveryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* EveryTest.m */; };
+		DBDA22871AFC530A00345BD4 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
+		DBDA22881AFC530A00345BD4 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
+		DBDA22891AFC530A00345BD4 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
+		DBDA228A1AFC530A00345BD4 /* IsCollectionContainingInAnyOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */; };
+		DBDA228B1AFC530A00345BD4 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */; };
+		DBDA228C1AFC530A00345BD4 /* IsCollectionContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* IsCollectionContainingTest.m */; };
+		DBDA228D1AFC530A00345BD4 /* IsCollectionOnlyContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */; };
+		DBDA228E1AFC530A00345BD4 /* IsDictionaryContainingEntriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */; };
+		DBDA228F1AFC530A00345BD4 /* IsDictionaryContainingKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */; };
+		DBDA22901AFC530A00345BD4 /* IsDictionaryContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* IsDictionaryContainingTest.m */; };
+		DBDA22911AFC530A00345BD4 /* IsDictionaryContainingValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */; };
+		DBDA22921AFC530A00345BD4 /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
+		DBDA22931AFC530A00345BD4 /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
+		DBDA22941AFC530A00345BD4 /* Mismatchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCC467D6EFFC559012D61 /* Mismatchable.m */; };
+		DBDA22951AFC530A00345BD4 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
+		DBDA22961AFC530A00345BD4 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
+		DBDA22971AFC530A00345BD4 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */; };
+		DBDA22981AFC530A00345BD4 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* AllOfTest.m */; };
+		DBDA22991AFC530A00345BD4 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */; };
+		DBDA229A1AFC530A00345BD4 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */; };
+		DBDA229B1AFC530A00345BD4 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */; };
+		DBDA229C1AFC530A00345BD4 /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
+		DBDA229D1AFC530A00345BD4 /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
+		DBDA229E1AFC530A00345BD4 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
+		DBDA229F1AFC530A00345BD4 /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* NumberAssertTest.m */; };
+		DBDA22A01AFC530A00345BD4 /* OrderingComparisonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* OrderingComparisonTest.m */; };
+		DBDA22A11AFC530A00345BD4 /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		DBDA22A21AFC530A00345BD4 /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HasDescriptionTest.m */; };
+		DBDA22A31AFC530A00345BD4 /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		DBDA22A41AFC530A00345BD4 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */; };
+		DBDA22A51AFC530A00345BD4 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */; };
+		DBDA22A61AFC530A00345BD4 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
+		DBDA22A71AFC530A00345BD4 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
+		DBDA22A81AFC530A00345BD4 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
+		DBDA22A91AFC530A00345BD4 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
+		DBDA22AA1AFC530A00345BD4 /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */; };
+		DBDA22AB1AFC530A00345BD4 /* IsEqualIgnoringCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */; };
+		DBDA22AC1AFC530A00345BD4 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */; };
+		DBDA22AD1AFC530A00345BD4 /* StringContainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* StringContainsTest.m */; };
+		DBDA22AE1AFC530A00345BD4 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
+		DBDA22AF1AFC530A00345BD4 /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
+		DBDA22B01AFC530A00345BD4 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,10 +433,16 @@
 			remoteGlobalIDString = 087601E113440806001B439B;
 			remoteInfo = OCHamcrest;
 		};
+		DBDA227A1AFC52AA00345BD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 087601D813440806001B439B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 087601E113440806001B439B;
+			remoteInfo = OCHamcrest;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0817B5CC147EC45200C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		081BEE6C1345979F003F846A /* libochamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082E7C2913FF676E004A22FE /* AbstractMatcherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractMatcherTest.h; sourceTree = "<group>"; };
@@ -602,6 +657,7 @@
 		BB333FE413C7E8FA9C811BF1 /* HCIsCollectionContainingInAnyOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInAnyOrder.m; sourceTree = "<group>"; };
 		BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCharReturnGetter.m; sourceTree = "<group>"; };
 		BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFloatReturnGetter.h; sourceTree = "<group>"; };
+		DBDA22731AFC52AA00345BD4 /* OCHamcrestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,7 +674,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */,
-				0817B5CE147EC45200C5401D /* SenTestingKit.framework in Frameworks */,
 				081BEE721345979F003F846A /* libochamcrest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,7 +692,14 @@
 			files = (
 				081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */,
 				087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */,
-				0817B5CD147EC45200C5401D /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDA22701AFC52AA00345BD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBDA22791AFC52AA00345BD4 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +767,7 @@
 				087601F713440807001B439B /* OCHamcrestTests.octest */,
 				081BEE621345979F003F846A /* libochamcrest.a */,
 				081BEE6C1345979F003F846A /* libochamcrestTests.octest */,
+				DBDA22731AFC52AA00345BD4 /* OCHamcrestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -713,7 +776,6 @@
 			isa = PBXGroup;
 			children = (
 				087601EA13440807001B439B /* Foundation.framework */,
-				0817B5CC147EC45200C5401D /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1194,7 +1256,7 @@
 			name = libochamcrestTests;
 			productName = libochamcrestTests;
 			productReference = 081BEE6C1345979F003F846A /* libochamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		087601E113440806001B439B /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
@@ -1215,9 +1277,9 @@
 			productReference = 087601E213440806001B439B /* OCHamcrest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		087601F613440807001B439B /* OCHamcrestTests */ = {
+		087601F613440807001B439B /* OCHamcrestTests-Old */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0876020C13440807001B439B /* Build configuration list for PBXNativeTarget "OCHamcrestTests" */;
+			buildConfigurationList = 0876020C13440807001B439B /* Build configuration list for PBXNativeTarget "OCHamcrestTests-Old" */;
 			buildPhases = (
 				087601F213440807001B439B /* Sources */,
 				087601F313440807001B439B /* Frameworks */,
@@ -1229,10 +1291,28 @@
 			dependencies = (
 				087601FA13440807001B439B /* PBXTargetDependency */,
 			);
-			name = OCHamcrestTests;
+			name = "OCHamcrestTests-Old";
 			productName = OCHamcrestTests;
 			productReference = 087601F713440807001B439B /* OCHamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBDA22721AFC52AA00345BD4 /* OCHamcrestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBDA227C1AFC52AA00345BD4 /* Build configuration list for PBXNativeTarget "OCHamcrestTests" */;
+			buildPhases = (
+				DBDA226F1AFC52AA00345BD4 /* Sources */,
+				DBDA22701AFC52AA00345BD4 /* Frameworks */,
+				DBDA22711AFC52AA00345BD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBDA227B1AFC52AA00345BD4 /* PBXTargetDependency */,
+			);
+			name = OCHamcrestTests;
+			productName = OCHamcrestTests;
+			productReference = DBDA22731AFC52AA00345BD4 /* OCHamcrestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1243,6 +1323,11 @@
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hamcrest.org;
+				TargetAttributes = {
+					DBDA22721AFC52AA00345BD4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 087601DB13440806001B439B /* Build configuration list for PBXProject "OCHamcrest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1257,7 +1342,8 @@
 			projectRoot = "";
 			targets = (
 				087601E113440806001B439B /* OCHamcrest */,
-				087601F613440807001B439B /* OCHamcrestTests */,
+				087601F613440807001B439B /* OCHamcrestTests-Old */,
+				DBDA22721AFC52AA00345BD4 /* OCHamcrestTests */,
 				081BEE611345979F003F846A /* libochamcrest */,
 				081BEE6B1345979F003F846A /* libochamcrestTests */,
 				08F1B0D5187275F2001D28B2 /* OCLint */,
@@ -1281,6 +1367,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		087601F413440807001B439B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDA22711AFC52AA00345BD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1630,6 +1723,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBDA226F1AFC52AA00345BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBDA22811AFC530A00345BD4 /* AssertThatAfterTest.m in Sources */,
+				DBDA22991AFC530A00345BD4 /* AnyOfTest.m in Sources */,
+				DBDA22861AFC530A00345BD4 /* EveryTest.m in Sources */,
+				DBDA228A1AFC530A00345BD4 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
+				DBDA22A51AFC530A00345BD4 /* IsInstanceOfTest.m in Sources */,
+				DBDA228C1AFC530A00345BD4 /* IsCollectionContainingTest.m in Sources */,
+				DBDA22A81AFC530A00345BD4 /* IsTypeOfTest.m in Sources */,
+				DBDA22A31AFC530A00345BD4 /* HasPropertyTest.m in Sources */,
+				DBDA228E1AFC530A00345BD4 /* IsDictionaryContainingEntriesTest.m in Sources */,
+				DBDA22921AFC530A00345BD4 /* IsEmptyCollectionTest.m in Sources */,
+				DBDA22981AFC530A00345BD4 /* AllOfTest.m in Sources */,
+				DBDA228D1AFC530A00345BD4 /* IsCollectionOnlyContainingTest.m in Sources */,
+				DBDA22A41AFC530A00345BD4 /* IsEqualTest.m in Sources */,
+				DBDA22961AFC530A00345BD4 /* IsTest.m in Sources */,
+				DBDA22941AFC530A00345BD4 /* Mismatchable.m in Sources */,
+				DBDA22B01AFC530A00345BD4 /* StringStartsWithTest.m in Sources */,
+				DBDA22801AFC530A00345BD4 /* AssertThatTest.m in Sources */,
+				DBDA229D1AFC530A00345BD4 /* IsEqualToNumberTest.m in Sources */,
+				DBDA22971AFC530A00345BD4 /* NeverMatch.m in Sources */,
+				DBDA22AB1AFC530A00345BD4 /* IsEqualIgnoringCaseTest.m in Sources */,
+				DBDA229C1AFC530A00345BD4 /* IsCloseToTest.m in Sources */,
+				DBDA228F1AFC530A00345BD4 /* IsDictionaryContainingKeyTest.m in Sources */,
+				DBDA22891AFC530A00345BD4 /* HasCountTest.m in Sources */,
+				DBDA229F1AFC530A00345BD4 /* NumberAssertTest.m in Sources */,
+				DBDA22AA1AFC530A00345BD4 /* ThrowsExceptionTest.m in Sources */,
+				DBDA22A01AFC530A00345BD4 /* OrderingComparisonTest.m in Sources */,
+				DBDA22931AFC530A00345BD4 /* IsInTest.m in Sources */,
+				DBDA22AC1AFC530A00345BD4 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
+				DBDA229B1AFC530A00345BD4 /* IsNotTest.m in Sources */,
+				DBDA22AF1AFC530A00345BD4 /* StringEndsWithTest.m in Sources */,
+				DBDA229E1AFC530A00345BD4 /* IsTrueFalseTest.m in Sources */,
+				DBDA22841AFC530A00345BD4 /* InvocationMatcherTest.m in Sources */,
+				DBDA22831AFC530A00345BD4 /* DiagnosingMatcherTest.m in Sources */,
+				DBDA22AE1AFC530A00345BD4 /* StringContainsInOrderTest.m in Sources */,
+				DBDA22A11AFC530A00345BD4 /* ConformsToProtocolTest.m in Sources */,
+				DBDA227F1AFC530A00345BD4 /* AbstractMatcherTest.m in Sources */,
+				DBDA22A91AFC530A00345BD4 /* SomeClassAndSubclass.m in Sources */,
+				DBDA22AD1AFC530A00345BD4 /* StringContainsTest.m in Sources */,
+				DBDA22A61AFC530A00345BD4 /* IsNilTest.m in Sources */,
+				DBDA22821AFC530A00345BD4 /* BaseMatcherTest.m in Sources */,
+				DBDA22871AFC530A00345BD4 /* FakeWithCount.m in Sources */,
+				DBDA229A1AFC530A00345BD4 /* IsAnythingTest.m in Sources */,
+				DBDA22951AFC530A00345BD4 /* DescribedAsTest.m in Sources */,
+				DBDA228B1AFC530A00345BD4 /* IsCollectionContainingInOrderTest.m in Sources */,
+				DBDA22901AFC530A00345BD4 /* IsDictionaryContainingTest.m in Sources */,
+				DBDA22851AFC530A00345BD4 /* StringDescriptionTest.m in Sources */,
+				DBDA22911AFC530A00345BD4 /* IsDictionaryContainingValueTest.m in Sources */,
+				DBDA22881AFC530A00345BD4 /* FakeWithoutCount.m in Sources */,
+				DBDA22A71AFC530A00345BD4 /* IsSameTest.m in Sources */,
+				DBDA22A21AFC530A00345BD4 /* HasDescriptionTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1642,6 +1792,11 @@
 			isa = PBXTargetDependency;
 			target = 087601E113440806001B439B /* OCHamcrest */;
 			targetProxy = 087601F913440807001B439B /* PBXContainerItemProxy */;
+		};
+		DBDA227B1AFC52AA00345BD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 087601E113440806001B439B /* OCHamcrest */;
+			targetProxy = DBDA227A1AFC52AA00345BD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1791,13 +1946,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1808,12 +1962,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1828,6 +1981,88 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DBDA227D1AFC52AA00345BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DBDA227E1AFC52AA00345BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1870,7 +2105,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0876020C13440807001B439B /* Build configuration list for PBXNativeTarget "OCHamcrestTests" */ = {
+		0876020C13440807001B439B /* Build configuration list for PBXNativeTarget "OCHamcrestTests-Old" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0876020D13440807001B439B /* Debug */,
@@ -1887,6 +2122,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DBDA227C1AFC52AA00345BD4 /* Build configuration list for PBXNativeTarget "OCHamcrestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBDA227D1AFC52AA00345BD4 /* Debug */,
+				DBDA227E1AFC52AA00345BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

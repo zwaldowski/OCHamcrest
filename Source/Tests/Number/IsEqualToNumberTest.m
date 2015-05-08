@@ -8,6 +8,8 @@
     // Test support
 #import "AbstractMatcherTest.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @interface IsEqualToBoolTest : AbstractMatcherTest
 @end
@@ -51,6 +53,7 @@
 
 @end
 
+#pragma clang diagnostic pop
 
 @interface IsEqualToCharTest : AbstractMatcherTest
 @end

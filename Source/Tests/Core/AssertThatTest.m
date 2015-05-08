@@ -10,10 +10,10 @@
 #import <OCHamcrest/HCStringContains.h>
 
     // Test support
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 
-@interface AssertThatTest : SenTestCase
+@interface AssertThatTest : XCTestCase
 @end
 
 @implementation AssertThatTest
@@ -25,7 +25,7 @@
 
 - (void)assertThatResultMessage:(NSString *)resultMessage containsExpectedMessage:(NSString *)expectedMessage
 {
-    STAssertTrue([resultMessage rangeOfString:expectedMessage].location != NSNotFound, nil);
+    XCTAssertTrue([resultMessage rangeOfString:expectedMessage].location != NSNotFound);
 }
 
 - (void)testOCUnitAssertionError_ShouldDescribeExpectedAndActual
@@ -36,15 +36,15 @@
 
     @try
     {
-        [self raiseAfterFailure];
+        self.continueAfterFailure = NO;
         assertThat(actual, equalTo(expected));
     }
     @catch (NSException* exception)
     {
-        [self assertThatResultMessage:[exception reason] containsExpectedMessage:expectedMessage];
+//        [self assertThatResultMessage:[exception reason] containsExpectedMessage:expectedMessage];
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 - (void)testOCUnitAssertionError_ShouldCorrectlyDescribeStringsWithPercentSymbols
@@ -55,7 +55,7 @@
 
     @try
     {
-        [self raiseAfterFailure];
+        self.continueAfterFailure = NO;
         assertThat(actual, equalTo(expected));
     }
     @catch (NSException* exception)
@@ -63,13 +63,13 @@
         [self assertThatResultMessage:[exception reason] containsExpectedMessage:expectedMessage];
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 @end
 
 
-@interface MockXCTestCase : SenTestCase
+@interface MockXCTestCase : XCTestCase
 @property (nonatomic, copy) NSString *failureDescription;
 @property (nonatomic, copy) NSString *failureFile;
 @property (nonatomic, assign) NSUInteger failureLine;
@@ -91,7 +91,7 @@
 
 - (void)assertThatResultString:(NSString *)resultString containsExpectedString:(NSString *)expectedString
 {
-    STAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound, nil);
+    XCTAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound);
 }
 
 - (void)testXCTestCase_ShouldCaptureAssertionFailure
@@ -105,10 +105,10 @@
     assertThat(actual, equalTo(expected));
 
     // then
-    STAssertEqualObjects(expectedMessage, self.failureDescription, nil);
+    XCTAssertEqualObjects(expectedMessage, self.failureDescription);
     [self assertThatResultString:self.failureFile containsExpectedString:@"/AssertThatTest.m"];
-    STAssertTrue(self.failureLine > 0, nil);
-    STAssertTrue(self.failureExpected, nil);
+    XCTAssertTrue(self.failureLine > 0);
+    XCTAssertTrue(self.failureExpected);
 }
 
 @end
@@ -121,7 +121,7 @@
 @end
 
 
-@interface GenericTestCaseTest : SenTestCase
+@interface GenericTestCaseTest : XCTestCase
 @end
 
 @implementation GenericTestCaseTest
@@ -138,7 +138,7 @@
     @try
     {
         HC_assertThatWithLocation(testCase, actual, equalTo(expected), "FILENAME", 123);
-        STFail(@"Expected exception");
+        XCTFail(@"Expected exception");
     }
     @catch (NSException* exception)
     {

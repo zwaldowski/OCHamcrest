@@ -10,12 +10,12 @@
 #import <OCHamcrest/HCIsEqual.h>
 
     // Test support
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 
 static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
-@interface AssertThatAfterTest : SenTestCase
+@interface AssertThatAfterTest : XCTestCase
 @end
 
 @implementation AssertThatAfterTest
@@ -36,17 +36,17 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
         @try
         {
-            [self raiseAfterFailure];
+            self.continueAfterFailure = NO;
             assertThatAfter(maxTime, futureValueOf(@"foo"), equalTo(@"bar"));
         }
         @catch (NSException *exception)
         {
             return;
         }
-        STFail(@"should have failed");
+        XCTFail(@"should have failed");
     }];
 
-    STAssertEqualsWithAccuracy(waitTime, maxTime, TIME_ERROR_MARGIN,
+    XCTAssertEqualWithAccuracy(waitTime, maxTime, TIME_ERROR_MARGIN,
                             @"Assert should have failed immediately");
 }
 
@@ -56,17 +56,17 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
         @try
         {
-            [self raiseAfterFailure];
+            self.continueAfterFailure = NO;
             assertThatAfter(maxTime, futureValueOf(@"foo"), equalTo(@"bar"));
         }
         @catch (NSException *exception)
         {
             return;
         }
-        STFail(@"should have failed");
+        XCTFail(@"should have failed");
     }];
 
-    STAssertEqualsWithAccuracy(waitTime, maxTime, TIME_ERROR_MARGIN,
+    XCTAssertEqualWithAccuracy(waitTime, maxTime, TIME_ERROR_MARGIN,
                             @"Assert should have failed after %f seconds", maxTime);
 }
 
@@ -85,16 +85,16 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
         @try
         {
-            [self raiseAfterFailure];
+            self.continueAfterFailure = NO;
             assertThatAfter(maxTime, futureValueOf(futureBar), equalTo(@"bar"));
         }
         @catch (NSException *exception)
         {
-            STFail(@"should have succeeded");
+            XCTFail(@"should have succeeded");
         }
     }];
 
-    STAssertEqualsWithAccuracy(waitTime, succeedTime, TIME_ERROR_MARGIN,
+    XCTAssertEqualWithAccuracy(waitTime, succeedTime, TIME_ERROR_MARGIN,
                             @"Assert should have succeeded in approximately %f seconds", succeedTime);
 }
 
@@ -115,15 +115,15 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
     @try
     {
-        [self raiseAfterFailure];
+        self.continueAfterFailure = NO;
         assertThatAfter(irrelevantMaxTime, futureValueOf(actual), equalTo(expected));
     }
     @catch (NSException* exception)
     {
-        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        XCTAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound);
         return;
     }
-    STFail(@"should have failed");
+    XCTFail(@"should have failed");
 }
 
 @end

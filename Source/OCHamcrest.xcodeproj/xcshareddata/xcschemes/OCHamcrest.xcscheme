@@ -20,6 +20,20 @@
                ReferencedContainer = "container:OCHamcrest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DBDA22721AFC52AA00345BD4"
+               BuildableName = "OCHamcrestTests.xctest"
+               BlueprintName = "OCHamcrestTests"
+               ReferencedContainer = "container:OCHamcrest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -51,13 +65,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "087601F613440807001B439B"
-               BuildableName = "OCHamcrestTests.octest"
+               BlueprintIdentifier = "DBDA22721AFC52AA00345BD4"
+               BuildableName = "OCHamcrestTests.xctest"
                BlueprintName = "OCHamcrestTests"
                ReferencedContainer = "container:OCHamcrest.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "087601E113440806001B439B"
+            BuildableName = "OCHamcrest.framework"
+            BlueprintName = "OCHamcrest"
+            ReferencedContainer = "container:OCHamcrest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -68,6 +91,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "087601E113440806001B439B"
+            BuildableName = "OCHamcrest.framework"
+            BlueprintName = "OCHamcrest"
+            ReferencedContainer = "container:OCHamcrest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,6 +109,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "087601E113440806001B439B"
+            BuildableName = "OCHamcrest.framework"
+            BlueprintName = "OCHamcrest"
+            ReferencedContainer = "container:OCHamcrest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

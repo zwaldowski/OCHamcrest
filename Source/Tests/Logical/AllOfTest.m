@@ -78,7 +78,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(allOf(nil), @"Should require non-nil list");
+    XCTAssertThrows(allOf(nil), @"Should require non-nil list");
 }
 
 @end

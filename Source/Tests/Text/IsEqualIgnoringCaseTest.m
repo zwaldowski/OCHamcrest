@@ -52,7 +52,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(equalToIgnoringCase(nil), @"Should require non-nil argument");
+    XCTAssertThrows(equalToIgnoringCase(nil), @"Should require non-nil argument");
 }
 
 - (void)testFailsIfMatchingAgainstNonString

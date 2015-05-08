@@ -121,7 +121,7 @@
 
 - (void)testMatcherCreationRequiresNonNilPropertyName
 {
-    STAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
+    XCTAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
 }
 
 - (void)testHasAReadableDescription
@@ -240,9 +240,10 @@
 
 - (void)testCanMatchPrimitiveLongLongValues
 {
-    foo.longLongValue = LONG_MIN - 1;
+    long long value = LONG_MIN - 1;
+    foo.longLongValue = value;
     assertMatches(@"long long should match",
-                  hasProperty(@"longLongValue", equalTo(@(LONG_MIN - 1))),
+                  hasProperty(@"longLongValue", equalTo(@(value))),
                   foo);
     assertDoesNotMatch(@"long long should not match",
                        hasProperty(@"longLongValue", equalTo(@LONG_MIN)),

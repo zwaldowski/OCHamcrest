@@ -57,7 +57,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
+    XCTAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
 }
 
 - (void)testFailsIfMatchingAgainstNonString
