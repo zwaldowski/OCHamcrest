@@ -8,12 +8,10 @@
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
+#import <OCHamcrest/HCIsNot.h>
 
     // Test support
 #import <XCTest/XCTest.h>
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @interface NumberAssertTest : XCTestCase
 @end
@@ -26,306 +24,99 @@
     self.continueAfterFailure = NO;
 }
 
-- (void)testSuccess_withBool
-{
-    assertThatBool(YES, equalTo([NSNumber numberWithBool:YES]));
-}
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-- (void)testFailure_withBool
+- (void)testWithBool
 {
-    @try
-    {
-        assertThatBool(YES, equalTo([NSNumber numberWithBool:NO]));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <0>, but was <1>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-
-- (void)testFailure_withBoolMoreExplicitDescription
-{
-    @try
-    {
-        assertThatBool(YES, equalToBool(NO));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected a BOOL with value <NO>, but was <YES>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatBool(YES, equalTo(@YES));
+    assertThatBool(YES, isNot(equalTo(@NO)));
 }
 
 #pragma clang diagnostic pop
 
-- (void)testSuccess_withChar
+- (void)testWithChar
 {
     assertThatChar('A', equalTo(@'A'));
+    assertThatChar('A', isNot(equalTo(@'B')));
 }
 
-- (void)testFailure_withChar
-{
-    @try
-    {
-        assertThatChar('B', equalTo(@'A'));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <65>, but was <66>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withDouble
+- (void)testWithDouble
 {
     assertThatDouble(1.5, equalTo(@1.5));
+    assertThatDouble(2.5, isNot(equalTo(@1.5)));
 }
 
-- (void)testFailure_withDouble
-{
-    @try
-    {
-        assertThatDouble(2.5, equalTo(@1.5));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withFloat
+- (void)testWithFloat
 {
     assertThatFloat(1.5f, equalTo(@1.5f));
+    assertThatFloat(2.5f, isNot(equalTo(@1.5f)));
 }
 
-- (void)testFailure_withFloat
-{
-    @try
-    {
-        assertThatFloat(2.5f, equalTo(@1.5f));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1.5>, but was <2.5>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withInt
+- (void)testWithInt
 {
     assertThatInt(1, equalTo(@1));
+    assertThatInt(2, isNot(equalTo(@1)));
 }
 
-- (void)testFailure_withInt
+- (void)testWithLong
 {
-    @try
-    {
-        assertThatInt(2, equalTo(@1));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatLong(1, equalTo(@1L));
+    assertThatLong(2, isNot(equalTo(@1L)));
 }
 
-- (void)testSuccess_withLong
+- (void)testWithLongLong
 {
-    assertThatLong(1L, equalTo(@1L));
+    assertThatLongLong(1, equalTo(@1LL));
+    assertThatLongLong(2, isNot(equalTo(@1LL)));
 }
 
-- (void)testFailure_withLong
+- (void)testWithShort
 {
-    @try
-    {
-        assertThatLong(2L, equalTo(@1L));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatShort(1, equalTo(@1));
+    assertThatShort(2, isNot(equalTo(@1)));
 }
 
-- (void)testSuccess_withLongLong
+- (void)testWithUnsignedChar
 {
-    assertThatLongLong(1LL, equalTo(@1LL));
+    assertThatUnsignedChar('A', equalTo(@'A'));
+    assertThatUnsignedChar('B', isNot(equalTo(@'A')));
 }
 
-- (void)testFailure_withLongLong
+- (void)testWithUnsignedInt
 {
-    @try
-    {
-        assertThatLongLong(2LL, equalTo(@1LL));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatUnsignedInt(1, equalTo(@1U));
+    assertThatUnsignedInt(2, isNot(equalTo(@1U)));
 }
 
-- (void)testSuccess_withShort
+- (void)testWithUnsignedLong
 {
-    assertThatShort(1, equalTo([NSNumber numberWithShort:1]));
+    assertThatUnsignedLong(1, equalTo(@1UL));
+    assertThatUnsignedLong(2, isNot(equalTo(@1UL)));
 }
 
-- (void)testFailure_withShort
+- (void)testWithUnsignedLongLong
 {
-    @try
-    {
-        assertThatShort(2, equalTo([NSNumber numberWithShort:1]));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatUnsignedLongLong(1, equalTo(@1ULL));
+    assertThatUnsignedLongLong(2, isNot(equalTo(@1ULL)));
 }
 
-- (void)testSuccess_withUnsignedChar
+- (void)testWithUnsignedShort
 {
-    assertThatUnsignedChar('A', equalTo([NSNumber numberWithUnsignedChar:'A']));
+    assertThatUnsignedShort(1, equalTo(@1U));
+    assertThatUnsignedShort(2, isNot(equalTo(@1U)));
 }
 
-- (void)testFailure_withUnsignedChar
-{
-    @try
-    {
-        assertThatUnsignedChar('B', equalTo([NSNumber numberWithUnsignedChar:'A']));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <65>, but was <66>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withUnsignedInt
-{
-    assertThatUnsignedInt(1U, equalTo(@1U));
-}
-
-- (void)testFailure_withUnsignedInt
-{
-    @try
-    {
-        assertThatUnsignedInt(2U, equalTo(@1U));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withUnsignedLong
-{
-    assertThatUnsignedLong(1UL, equalTo(@1UL));
-}
-
-- (void)testFailure_withUnsignedLong
-{
-    @try
-    {
-        assertThatUnsignedLong(2UL, equalTo(@1UL));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withUnsignedLongLong
-{
-    assertThatUnsignedLongLong(1ULL, equalTo(@1ULL));
-}
-
-- (void)testFailure_withUnsignedLongLong
-{
-    @try
-    {
-        assertThatUnsignedLongLong(2ULL, equalTo(@1ULL));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason]);
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withUnsignedShort
-{
-    assertThatUnsignedShort(1U, equalTo([NSNumber numberWithUnsignedShort:1U]));
-}
-
-- (void)testFailure_withUnsignedShort
-{
-    @try
-    {
-        assertThatUnsignedShort(2U, equalTo([NSNumber numberWithUnsignedShort:1U]));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withInteger
+- (void)testWithInteger
 {
     assertThatInteger(1, equalTo(@1));
+    assertThatInteger(2, isNot(equalTo(@1)));
 }
 
-- (void)testFailure_withInteger
+- (void)testWithUnsignedInteger
 {
-    @try
-    {
-        assertThatInteger(2, equalTo(@1));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
-}
-
-- (void)testSuccess_withUnsignedInteger
-{
-    assertThatUnsignedInteger(1, equalTo([NSNumber numberWithUnsignedInteger:1]));
-}
-
-- (void)testFailure_withUnsignedInteger
-{
-    @try
-    {
-        assertThatUnsignedInteger(2, equalTo([NSNumber numberWithUnsignedInteger:1]));
-    }
-    @catch (NSException* exception)
-    {
-        XCTAssertEqualObjects([exception reason], @"Expected <1>, but was <2>");
-        return;
-    }
-    XCTFail(@"should have failed");
+    assertThatUnsignedInteger(1, equalTo(@1UL));
+    assertThatUnsignedInteger(2, isNot(equalTo(@1UL)));
 }
 
 @end
