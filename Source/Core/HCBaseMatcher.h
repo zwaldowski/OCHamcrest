@@ -2,7 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
-#import <OCHamcrest/HCMatcher.h>
+#import "HCMatcher.h"
 
 #define HC_ABSTRACT_METHOD [self subclassResponsibility:_cmd]
 

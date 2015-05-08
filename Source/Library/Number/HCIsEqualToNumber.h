@@ -1,7 +1,7 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
-#import <OCHamcrest/HCBaseMatcher.h>
+#import "HCBaseMatcher.h"
 
 
 FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));

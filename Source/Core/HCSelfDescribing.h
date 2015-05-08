@@ -2,8 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
-
-#import "HCDescription.h"   // Convenience header
+#import "HCDescription.h"
 
 
 /**

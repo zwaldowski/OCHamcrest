@@ -2,7 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
-#import <OCHamcrest/HCDescription.h>
+#import "HCDescription.h"
 
 
 /**

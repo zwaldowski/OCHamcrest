@@ -2,10 +2,8 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
-
 #import <stdarg.h>
-
-@protocol HCMatcher;
+#import "HCMatcher.h"
 
 
 /**

@@ -2,8 +2,8 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
+#import "HCMatcher.h"
 
-@protocol HCMatcher;
 
 
 FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,

@@ -2,7 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 //  Contribution by Justin Shacklette
 
-#import <OCHamcrest/HCDiagnosingMatcher.h>
+#import "HCDiagnosingMatcher.h"
 
 
 @interface HCHasProperty : HCDiagnosingMatcher

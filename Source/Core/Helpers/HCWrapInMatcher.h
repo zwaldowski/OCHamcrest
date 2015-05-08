@@ -2,9 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
-
-@protocol HCMatcher;
-
+#import "HCMatcher.h"
 
 /**
  Wraps argument in a matcher, if necessary.

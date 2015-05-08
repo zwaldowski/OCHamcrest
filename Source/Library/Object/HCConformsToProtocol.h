@@ -2,7 +2,7 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 //  Contribution by Todd Farrell
 
-#import <OCHamcrest/HCBaseMatcher.h>
+#import "HCBaseMatcher.h"
 
 
 @interface HCConformsToProtocol : HCBaseMatcher

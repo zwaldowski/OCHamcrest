@@ -2,6 +2,33 @@
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 
 /**
+ @defgroup core Core API
+ */
+#import <OCHamcrest/HCAssertThat.h>
+#import <OCHamcrest/HCBaseDescription.h>
+#import <OCHamcrest/HCBaseMatcher.h>
+#import <OCHamcrest/HCDescription.h>
+#import <OCHamcrest/HCMatcher.h>
+#import <OCHamcrest/HCSelfDescribing.h>
+#import <OCHamcrest/HCStringDescription.h>
+
+#import <OCHamcrest/HCMatcher.h>
+#import <OCHamcrest/HCSelfDescribing.h>
+#import <OCHamcrest/HCStringDescription.h>
+
+/**
+ @defgroup helpers Helpers
+ 
+ Utilities for writing Matchers.
+ 
+ @ingroup core
+ */
+#import <OCHamcrest/HCCollect.h>
+#import <OCHamcrest/HCInvocationMatcher.h>
+#import <OCHamcrest/HCRequireNonNilObject.h>
+#import <OCHamcrest/HCWrapInMatcher.h>
+
+/**
  @defgroup library Matcher Library
 
  Library of Matcher implementations.
@@ -31,7 +58,6 @@
 
  @ingroup library
  */
-#import <OCHamcrest/HCEvery.h>
 #import <OCHamcrest/HCHasCount.h>
 #import <OCHamcrest/HCIsCollectionContaining.h>
 #import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
@@ -103,7 +129,6 @@
 /**
  @defgroup integration Unit Test Integration
  */
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCTestFailure.h>
 #import <OCHamcrest/HCTestFailureHandler.h>
 #import <OCHamcrest/HCTestFailureHandlerChain.h>
@@ -125,14 +150,5 @@
  */
 #import <OCHamcrest/HCNumberAssert.h>
 
-/**
- @defgroup core Core API
- */
-
-/**
- @defgroup helpers Helpers
-
- Utilities for writing Matchers.
-
- @ingroup core
- */
+#import <OCHamcrest/HCDiagnosingMatcher.h>
+#import <OCHamcrest/HCEvery.h>
